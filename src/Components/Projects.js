@@ -1,26 +1,57 @@
 import React from 'react'
-import { Card, Col, Container, Nav, Row } from 'react-bootstrap'
+
 
 const Projects = () => {
-    return (
-        <div>
-            <Container>
-                <Row>
-                    <Col>
-                        <Card>
-                            <Nav>
-                                <Nav.Link href="https://rohit-sanwariya.github.io/react-box-officeapp/#/" >
-                                    Box Office App
-                                </Nav.Link>
-                            </Nav>
-                        </Card>
-                    </Col>
-                    <Col>
+    
+    const linkProject =()=>{
+        return {
+            textDecoration:"none",
+            color:"black",
 
-                    </Col>
-                </Row>
-            </Container>
+           padding: "5.5rem"
+        }
+    }
+
+    const cardProject = () =>{
+        return {
+
+            margin: "1rem",
+            width: "25rem",
+            height: "14rem",
+            textAlign: "center",
+            border:"2px solid #efefef",
+            boxShadow:"5px 10px 5px ",
+            borderRadius:"1rem",
+            flex:2
+        }
+    }
+
+
+    return (
+
+
+        <div style={{ display: "flex", }}>
+            <div className="card" style={cardProject()}>
+                <a style={linkProject()}
+                    href="https://overconfident-recess.tictactoe_rohit.surge.sh/" >
+                    Tic Tac Toe
+                </a>
+            </div>
+
+
+            <div className="card"
+                style={cardProject()}
+            >
+                <a style={linkProject()} href="https://rohit-sanwariya.github.io/react-box-officeapp/#/" >
+                    Box Office App
+                </a>
+            </div>
         </div>
+
+
+
+
+
     )
 }
 
